@@ -11,3 +11,6 @@ query_params[:event_id] = params[:event_id] if param[:event_id].present?
 今直接打ち込んで表示してる(JSONデータ見れるだけ)から、フロント側で送ってきたデータをどういう風に反映させるのかが分からないので調べ中...
 ↑これrender plain: @events.to_sがプレーンテキスト(文字とかフォーマットがないやつ)で表示してる(htmlがない)からJSONだけ見えてるっぽい？html用意してなんかしてみる
         
+別件
+#require "bootsnap/setup" # Speed up boot time by caching expensive operations.
+boot.rbの場所のこれをコメントにしないと何故かサーバー起動できなかったため、コメント化した。
