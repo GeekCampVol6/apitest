@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
         # uri.query = URI.encode_www_form({event_id:params[:event_id]})
         # query_paramsの中にif文で入ってきたやつをが入ってる?
         query_params = {}
+        query_params[:count] = params[:count] if params[:count].present?
         query_params[:event_id] = params[:event_id] if params[:event_id].present?
         query_params[:keyword] = params[:keyword] if params[:keyword].present?
         query_params[:ymd] = params[:ymd] if params[:ymd].present?
